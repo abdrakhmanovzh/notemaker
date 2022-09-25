@@ -1,0 +1,18 @@
+{{template "top1" .}}
+ 
+<title>Звметка #{{.ID}}- Notemaker</title>
+{{template "top2" .}}
+<main>
+    <div class='snippet'>
+        <div class='metadata'>
+            <strong>{{.Name}}</strong>
+            <span>#{{.ID}}</span>
+        </div>
+        <pre><code>{{.Content}}</code></pre>
+        <form action = "/notemaker/{{.ID}}" method="post">
+            <button class = "delete">Удалить</button>
+        </form>
+    </div>
+</main>
+
+{{template "bottom" .}}

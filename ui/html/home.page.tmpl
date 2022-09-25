@@ -1,0 +1,19 @@
+{{template "top1" .}}
+ 
+<title>Домашняя страница - Notemaker</title>
+{{template "top2" .}}
+<main>
+    {{if .ToCheck}}
+        <h2>Все заметки</h2>
+        <div class = "snippet">
+            <ul class = "lists">
+            {{range .Note}}
+                <li><a href = "/notemaker/{{.Id}}">{{.Name}}</a></li>
+            {{end}}
+            </ul>
+        </div>
+    {{else}}
+        <h3>Нету никаких заметок...</h3>
+    {{end}}
+</main>
+{{template "bottom" .}}

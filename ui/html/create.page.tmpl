@@ -1,0 +1,14 @@
+{{template "top1" .}}
+
+<title>Новая заметка - Notemaker</title>
+
+{{template "top2" .}}
+<main>
+    <h2>Добавление заметки</h2>
+    <form action="/notemaker/save_note/" method = "post">
+        <input type="text" name="title" placeholder="Введите название заметки">
+        <textarea name = "content" placeholder="Введите содержимое"></textarea>
+        <button>Сохранить</button>
+    </form>
+</main>
+{{template "bottom" .}}
