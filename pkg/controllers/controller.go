@@ -19,7 +19,7 @@ func ShowAllNotes(ctx *gin.Context) {
 		toCheck = true
 	}
 
-	ctx.HTML(200, "home.page.tmpl", gin.H{
+	ctx.HTML(200, "notes.page.tmpl", gin.H{
 		"ToCheck": toCheck,
 		"Note":    notes,
 	})
