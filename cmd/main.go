@@ -9,7 +9,7 @@ import (
 
 func main() {
 	router := gin.Default()
-	var routerGroup = router.Group("/notemaker")
+	var routerGroup = router.Group("/")
 	routes.RegisterNoteRoutes(routerGroup)
 
 	router.LoadHTMLGlob("./ui/html/*")

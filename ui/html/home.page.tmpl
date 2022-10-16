@@ -1,0 +1,18 @@
+{{template "top1" .}}
+
+<title>Домашняя страница - Listmaker</title>
+
+{{template "top2" .}}
+<main>
+    <h1 class = "topic">Sign In</h2>
+    <form class="login">  
+        <label>Username</label>   
+        <input type="text" placeholder="Enter Username" name="username" required>  
+        <label>Password</label>   
+        <input type="password" placeholder="Enter Password" name="password" required>  
+        <button type="submit">Войти</button>   
+    </form>
+    <button class = "or">Or Register</button>
+</main>
+
+{{template "bottom" .}}

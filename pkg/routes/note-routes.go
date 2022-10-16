@@ -8,9 +8,10 @@ import (
 )
 
 var RegisterNoteRoutes = func(group *gin.RouterGroup) {
-	group.Handle(http.MethodGet, "/", controllers.ShowAllNotes)
-	group.Handle(http.MethodGet, "/:id", controllers.ShowNote)
-	group.Handle(http.MethodPost, "/save_note", controllers.CreatedNote)
-	group.Handle(http.MethodGet, "/create", controllers.CreateNote)
-	group.Handle(http.MethodPost, "/:id", controllers.DeleteNote)
+	group.Handle(http.MethodGet, "/", controllers.Home)
+	group.Handle(http.MethodGet, "/notemaker", controllers.ShowAllNotes)
+	group.Handle(http.MethodGet, "/notemaker/:id", controllers.ShowNote)
+	group.Handle(http.MethodPost, "/notemaker/save_note", controllers.CreatedNote)
+	group.Handle(http.MethodGet, "/notemaker/create", controllers.CreateNote)
+	group.Handle(http.MethodPost, "/notemaker/:id", controllers.DeleteNote)
 }

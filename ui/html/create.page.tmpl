@@ -3,10 +3,14 @@
 <title>Новая заметка - Notemaker</title>
 
 {{template "top2" .}}
+<nav>
+    <a href='/notemaker'>Домашняя страница</a>
+    <a href='/notemaker/create'>Создать новую заметку</a>
+</nav>
 <main>
     <h2>Добавление заметки</h2>
     <form action="/notemaker/save_note/" method = "post">
-        <input type="text" name="title" placeholder="Введите название заметки">
+        <input class = "title" type="text" name="title" placeholder="Введите название заметки">
         <textarea name = "content" placeholder="Введите содержимое"></textarea>
         <button>Сохранить</button>
     </form>

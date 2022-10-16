@@ -57,3 +57,7 @@ func DeleteNote(ctx *gin.Context) {
 	models.DeleteNote(NoteId)
 	ctx.Redirect(301, "/notemaker")
 }
+
+func Home(ctx *gin.Context) {
+	ctx.HTML(200, "home.page.tmpl", nil)
+}
